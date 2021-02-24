@@ -19,8 +19,22 @@ public abstract class BasedPage {
     @FindBy(xpath = "//*[.='Books']")
     public WebElement booksModule;
 
-
     @FindBy(xpath = "//*[@class='navbar-brand']")
     public WebElement libraryText;
+
+    @FindBy(xpath = "//a[@href='#users']")
+    public WebElement usersPageModule;
+
+    @FindBy(xpath = "//a[@href='#books']")
+    public WebElement booksPageModule;
+
+    @FindBy(xpath = "//a[@href='#dashboard']")
+    public WebElement dashboardPageModule;
+
+    @FindBy(xpath = "//a[@id='navbarDropdown']")
+    public WebElement accountHolderLink;
+
+    @FindBy(xpath = "//a[@href='#borrowing-books']")
+    public WebElement borrowingBooksModule;
 
 }
