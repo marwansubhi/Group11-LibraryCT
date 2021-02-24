@@ -20,6 +20,17 @@ public class LoginPage extends BasedPage {
     @FindBy(xpath = "//*[.='Sign in']")
     public WebElement signInButton;
 
+    @FindBy(xpath = "//img[@class='mb-4']")
+    public WebElement loginLogo;
+
+    @FindBy(id = "inputEmail")
+    public WebElement usernameBox;
+
+    @FindBy(id = "inputPassword")
+    public WebElement passwordBox;
+
+    @FindBy(className = "mt-5 mb-3 text-muted text-center")
+    public WebElement yearText;
 
 
 }
