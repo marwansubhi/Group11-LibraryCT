@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class UsersPage {
+public class UsersPage extends BasedPage{
 
 
     @FindBy(name = "tbl_users_length")

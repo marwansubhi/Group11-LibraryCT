@@ -1,15 +1,20 @@
 package com.libraryCT.step_definitions;
 import com.github.javafaker.Faker;
 import com.libraryCT.pages.DashboardPage;
+import com.libraryCT.pages.LoginPage;
 import com.libraryCT.pages.UsersPage;
 import com.libraryCT.utilities.BrowserUtils;
+import com.libraryCT.utilities.ConfigurationReader;
+import com.libraryCT.utilities.Driver;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 
 public class Add_Edit_Users_StepDefinitions {
+    LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
     UsersPage usersPage = new UsersPage();
     Faker faker = new Faker();
@@ -76,6 +81,23 @@ public class Add_Edit_Users_StepDefinitions {
     public void click_save_changes_button() {
         usersPage.saveChangesButton.click();
     }
+
+
+    @Given("I am on the login page")
+    public void i_am_on_the_login_page() {
+        String url = ConfigurationReader.getProperty("url");
+        Driver.getDriver().get(url);
+        BrowserUtils.wait(1);
+    }
+
+    @When("I login as a librarian")
+    public void i_login_as_a_librarian() {
+        loginPage.usernameBox.sendKeys(ConfigurationReader.getProperty("usernameL"));
+        loginPage.passwordBox.sendKeys(ConfigurationReader.getProperty("passwordL"));
+        BrowserUtils.wait(1);
+        loginPage.signInButton.click();
+    }
+
 
 
 }
