@@ -17,6 +17,9 @@ public class DashboardPage extends BasedPage {
     @FindBy(xpath = "//div//h2[@id='user_count']")
     public WebElement usersCount;
 
+    @FindBy(xpath = "//h3[.='Book Management'] ")
+    public WebElement bookManagementModule;
+
     @FindBy(xpath = "//*[@href='#users']")
     private WebElement usersLink;
 
@@ -36,6 +39,5 @@ public class DashboardPage extends BasedPage {
         if (actualNames.equals(expectedNames)) return true;
         else return false;
     }
-
 
 }
