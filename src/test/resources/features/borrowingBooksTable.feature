@@ -1,7 +1,6 @@
 Feature:Check borrowing books feature
 
 
-
   Scenario: borrowing books tabe columns names
 
     Given User on the login page
@@ -11,9 +10,9 @@ Feature:Check borrowing books feature
 
       | Action              |
       | Book Name           |
-      | Borrowed Date      |
+      | Borrowed Date       |
       | Planned Return Date |
       | Return Date         |
-      | Is Returned ?        |
+      | Is Returned ?       |
 
 

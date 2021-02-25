@@ -26,9 +26,6 @@ public class BookRecords_StepDefinitions {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
-
-
-
     @Given("User login as a librarian")
     public void user_login_as_a_librarian() {
 
@@ -53,6 +50,8 @@ public class BookRecords_StepDefinitions {
         Assert.assertEquals(expected + "", actual);
 
     }
+
+
     @Then("Show records should have following options")
     public void show_records_should_have_following_options(List<String> options) {
         BrowserUtils.wait(2);
@@ -61,10 +60,9 @@ public class BookRecords_StepDefinitions {
         List<String> actualText = BrowserUtils.getElementsText(webElements);
 
         Assert.assertEquals(options, actualText);
-
-
-
-
     }
+
+
+
 
 }
