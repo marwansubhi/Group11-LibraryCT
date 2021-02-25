@@ -24,7 +24,7 @@ public class BorrowedBooks_StepDefinition extends LoginPage {
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
     DashboardPage dashboardPage = new DashboardPage();
     BooksPage booksPage = new BooksPage();
-    BorrowingBooksPage borrowingBooksPage = new BorrowingBooksPage();
+    BorrowingBooksPage_2 borrowingBooksPage_2 = new BorrowingBooksPage_2();
     String borrowedBookName;
 
     @Given("User is on the login page")
@@ -75,13 +75,13 @@ public class BorrowedBooks_StepDefinition extends LoginPage {
 
     @Given("User's name is {string}")
     public void user_s_name_is(String string) {
-        Assert.assertEquals(string, borrowingBooksPage.userNameInUsers.getText());
+        Assert.assertEquals(string, borrowingBooksPage_2.userNameInUsers.getText());
     }
 
     @Then("User can see the borrowed book in the list of his borrowed books")
     public void user_can_see_the_borrowed_book_in_the_list_of_his_borrowed_books() {
         List<String> booksNames = new ArrayList<>();
-        for (WebElement eachBookName : borrowingBooksPage.namesOfBorrowedBooks) {
+        for (WebElement eachBookName : borrowingBooksPage_2.namesOfBorrowedBooks) {
             booksNames.add(eachBookName.getText());
         }
         Assert.assertTrue(booksNames.contains(borrowedBookName));

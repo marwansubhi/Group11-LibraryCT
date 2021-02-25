@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class BorrowingBooksPage {
-    public BorrowingBooksPage() {
+public class BorrowingBooksPage_2 {
+    public BorrowingBooksPage_2() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
