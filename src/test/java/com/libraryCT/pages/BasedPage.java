@@ -19,7 +19,6 @@ public abstract class BasedPage {
     @FindBy(xpath = "//*[.='Books']")
     public WebElement booksModule;
 
-
     @FindBy(xpath = "//*[@class='navbar-brand']")
     public WebElement libraryText;
 
@@ -40,5 +39,5 @@ public abstract class BasedPage {
 
     @FindBy(xpath = "//a[@id='navbarDropdown']//span")
     public WebElement accountName;
-
+    
 }
