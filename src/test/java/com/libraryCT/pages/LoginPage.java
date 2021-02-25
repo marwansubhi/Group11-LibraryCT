@@ -32,5 +32,12 @@ public class LoginPage extends BasedPage {
     @FindBy(className = "mt-5 mb-3 text-muted text-center")
     public WebElement yearText;
 
+    public DashboardPage loginAsLibrarian(String username, String password){
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        signInButton.click();
+        return new DashboardPage();
+    }
+
 
 }
