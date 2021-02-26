@@ -23,7 +23,7 @@ public class ManagementTable_StepDefinitions {
     @Given("the user login as a librarian and be on the home page")
     public void the_user_login_as_a_librarian_and_be_on_the_home_page() {
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+       // Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         String username = ConfigurationReader.getProperty("usernameL");
         String password = ConfigurationReader.getProperty("passwordL");
         loginPage.loginAsLibrarian(username,password);

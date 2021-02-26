@@ -1,8 +1,9 @@
+
 Feature: Borrowed books list feature
   As a user (student) I should be able to see my list of borrowed books
 
   Background: User is already on the login page
-    Given User is on the login page
+
 
   Scenario Outline: User can lend an available book
     When User logs in using "<email>" and "<password>"

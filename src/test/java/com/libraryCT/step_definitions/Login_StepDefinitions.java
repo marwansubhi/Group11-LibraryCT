@@ -15,13 +15,13 @@ public class Login_StepDefinitions {
     LoginPage loginPage = new LoginPage();
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
 
-    @Given("librarian on the login page")
-    public void librarian_on_the_login_page() {
-        String url = ConfigurationReader.getProperty("url");
-        Driver.getDriver().get(url);
-
-
-    }
+//    @Given("librarian on the login page")
+//    public void librarian_on_the_login_page() {
+//        String url = ConfigurationReader.getProperty("url");
+//        Driver.getDriver().get(url);
+//
+//
+//    }
 
     @When("I login as a librarian")
     public void i_login_as_a_librarian() {
@@ -29,6 +29,8 @@ public class Login_StepDefinitions {
         String password = ConfigurationReader.getProperty("passwordL");
         loginPage.usernameInput.sendKeys(username);
         loginPage.passwordInput.sendKeys(password);
+        loginPage.signInButton.click();
+
 
 
     }
@@ -51,14 +53,12 @@ public class Login_StepDefinitions {
     public void student_on_the_login_page() {
         String url = ConfigurationReader.getProperty("qa2_url");
         Driver.getDriver().get(url);
-
-
     }
 
     @When("login as a student")
     public void login_as_a_student() {
-        String username = ConfigurationReader.getProperty("student52_user");
-        String password = ConfigurationReader.getProperty("student52_pass");
+        String username = ConfigurationReader.getProperty("usernameS3");
+        String password = ConfigurationReader.getProperty("passwordS3");
 
         loginPage.usernameInput.sendKeys(username);
         loginPage.passwordInput.sendKeys(password);

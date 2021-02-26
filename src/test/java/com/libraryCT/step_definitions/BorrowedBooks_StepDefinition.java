@@ -27,10 +27,7 @@ public class BorrowedBooks_StepDefinition extends LoginPage {
     BorrowingBooksPage_2 borrowingBooksPage_2 = new BorrowingBooksPage_2();
     String borrowedBookName;
 
-    @Given("User is on the login page")
-    public void user_is_on_the_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-    }
+
 
     @When("User logs in using {string} and {string}")
     public void user_logs_in_using_and(String userName, String password) {
@@ -55,6 +52,7 @@ public class BorrowedBooks_StepDefinition extends LoginPage {
     public void user_lends_a_book_if_it_s_available() {
         booksPage.showRecordsDropDown.click();//sets to 500
         booksPage.lastBooksTablePage.click();
+        BrowserUtils.waitForPageToLoad(10);
         List<WebElement> listOfEnabledToBorrowBooks = new ArrayList<>(booksPage.enabledBooksToBorrow);
         borrowedBookName = booksPage.namesOfEnabledBooksToBorrow.get(0).getText();
         if (!listOfEnabledToBorrowBooks.isEmpty()) {
