@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         glue = "com/libraryCT/step_definitions",
         dryRun = false,
         //tags = ""
-         tags = " @modulesLibrarian"
+         tags = ""
         //tags = "@modules"
        // tags = "@modulesStudent"
 )
