@@ -3,7 +3,7 @@ Feature: As a librarian , I should be able to see book records
 
   @record
   Scenario: Verify that the default values in Users page
-    Given User on the login page
+    #Given User on the login page
     And User login as a librarian
     When User clicks on "Users" link
     And Show records default value should be 10

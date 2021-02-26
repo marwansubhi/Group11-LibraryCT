@@ -1,4 +1,5 @@
 package com.libraryCT.step_definitions;
+
 import com.github.javafaker.Faker;
 import com.libraryCT.pages.DashboardPage;
 import com.libraryCT.pages.LoginPage;
@@ -84,20 +85,23 @@ public class Add_Edit_Users_StepDefinitions {
     }
 
 
-    @Given("I am on the login page")
-    public void i_am_on_the_login_page() {
-        String url = ConfigurationReader.getProperty("url");
-        Driver.getDriver().get(url);
-        BrowserUtils.wait(1);
-    }
 
-    @When("I login as a librarian")
-    public void i_login_as_a_librarian() {
-        loginPage.usernameBox.sendKeys(ConfigurationReader.getProperty("usernameL"));
-        loginPage.passwordBox.sendKeys(ConfigurationReader.getProperty("passwordL"));
-        BrowserUtils.wait(1);
-        loginPage.signInButton.click();
-    }
+//    @When("I login as a librarian")
+//    public void i_login_as_a_librarian() {
+//        loginPage.usernameBox.sendKeys(ConfigurationReader.getProperty("usernameL"));
+//        loginPage.passwordBox.sendKeys(ConfigurationReader.getProperty("passwordL"));
+//        BrowserUtils.wait(1);
+//        loginPage.signInButton.click();
+//    }
+
+
+//    @Given("I am on the login page")
+//    public void i_am_on_the_login_page() {
+//        String url = ConfigurationReader.getProperty("url");
+//        Driver.getDriver().get(url);
+//        BrowserUtils.wait(1);
+//    }
+
 
 
 
