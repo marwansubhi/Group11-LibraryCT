@@ -28,4 +28,7 @@ public class US1_login_app_stepDefinition {
 
     }
 
+    @Given("the student login as a {string} and {string}")
+    public void theStudentLoginAsAAnd(String arg0, String arg1) {
+    }
 }
