@@ -1,5 +1,9 @@
 package com.libraryCT.step_definitions;
 
+
+
+import com.libraryCT.utilities.BrowserUtils;
+
 import com.libraryCT.utilities.ConfigurationReader;
 import com.libraryCT.utilities.Driver;
 import io.cucumber.java.*;
@@ -9,10 +13,12 @@ import org.openqa.selenium.TakesScreenshot;
 public class Hooks {
     @Before
     public void setUpScenario() {
+
         String url = ConfigurationReader.getProperty("url");
         Driver.getDriver().get(url);
 
     }
+
     @After
     public void tearDownScenario(Scenario scenario) {
 
@@ -26,17 +32,6 @@ public class Hooks {
         }
 
        Driver.closeDriver();
-    }
-
-    @BeforeStep
-    public void runBeforeSteps() {
-        System.out.println("________________Running Before Each STEP ________________");
-
-    }
-
-    @AfterStep
-    public void runsAfterSteps() {
-        System.out.println("________________Running AFTER Each STEP ________________");
     }
 
 }

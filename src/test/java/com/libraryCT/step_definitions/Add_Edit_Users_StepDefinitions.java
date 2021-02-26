@@ -66,7 +66,8 @@ public class Add_Edit_Users_StepDefinitions {
     @Then("{string} message should be displayed")
     public void message_should_be_displayed(String message) {
         System.out.println(usersPage.newUserCreatedMessage.getText().equals(message) + " - " + usersPage.newUserCreatedMessage.getText());
-        Assert.assertTrue(usersPage.newUserCreatedMessage.isDisplayed());
+       // Assert.assertTrue(usersPage.newUserCreatedMessage.isDisplayed());
+        BrowserUtils.verifyElementDisplayed(usersPage.newUserCreatedMessage);
         BrowserUtils.wait(2);
     }
 

@@ -37,4 +37,7 @@ public abstract class BasedPage {
     @FindBy(xpath = "//a[@href='#borrowing-books']")
     public WebElement borrowingBooksModule;
 
+    @FindBy(xpath = "//a[@id='navbarDropdown']//span")
+    public WebElement accountName;
+
 }
